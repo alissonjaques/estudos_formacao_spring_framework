@@ -1,4 +1,4 @@
-# Estudos Formacao Spring Framework
+# Estudos Formação Spring Framework
 Repositório contendo os projetos que fiz ao estudar a formação Spring Boot da Alura.
 
 # 1° Projeto: Aplicação que simula um controlador web (como o Spring Framework e VRaptor).
