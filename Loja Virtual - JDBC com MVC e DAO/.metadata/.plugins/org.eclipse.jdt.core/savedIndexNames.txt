@@ -1,6 +1,0 @@
-INDEX VERSION 1.131+C:\Users\licin\Documents\Programacao de Computadores\Java\Formação Spring  Framework\Loja Virtual - JDBC com MVC e DAO\.metadata\.plugins\org.eclipse.jdt.core
-1982301745.index
-2176573475.index
-1865797976.index
-406178756.index
-1640854758.index
