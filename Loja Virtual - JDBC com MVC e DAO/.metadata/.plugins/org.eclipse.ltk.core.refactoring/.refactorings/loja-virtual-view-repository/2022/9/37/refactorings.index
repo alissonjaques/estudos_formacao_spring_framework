@@ -1,0 +1,9 @@
+1662416004215	Rename package 'br.com.alura.jdbc'
+1662416035652	Rename package 'br.com.alura.jdbc.view'
+1662416051920	Rename package 'br.com.alura.jdbc.modelo'
+1662416068762	Rename package 'br.com.alura.jdbc.factory'
+1662416083122	Rename package 'br.com.alura.jdbc.dao'
+1662416096814	Rename package 'br.com.alura.jdbc.controller'
+1662416416073	Delete element
+1662416440488	Move 'Main.java' to 'main'
+1662417498429	Rename package 'br.com.alura.jdbc'
