@@ -1,0 +1,24 @@
+package br.com.empresa.loja.testes;
+
+import java.math.BigDecimal;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+
+import br.com.empresa.loja.dao.ProdutoDao;
+import br.com.empresa.loja.model.Produto;
+import br.com.empresa.loja.util.JPAUtil;
+
+public class CadastroDeProduto {
+
+	public static void main(String[] args) {
+		Produto celular = new Produto("Xiaomi Redmi","Celular Moderno de Excelente Qualidade.",new BigDecimal("800"));
+		EntityManager em = JPAUtil.getEntityManager();       
+	    ProdutoDao produtoDao = new ProdutoDao(em);
+		em.getTransaction().begin();
+	    produtoDao.cadastrar(celular);
+	    em.getTransaction().commit();
+	    em.close();
+	}
+
+}

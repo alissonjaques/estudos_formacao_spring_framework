@@ -1,0 +1,6 @@
+package br.com.empresa.loja.model;
+
+public class Categoria {
+	private Long id;
+	private String nome;
+}

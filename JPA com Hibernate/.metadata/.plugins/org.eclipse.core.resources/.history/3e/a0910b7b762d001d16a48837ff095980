@@ -1,0 +1,30 @@
+package br.com.empresa.loja.dao;
+
+import javax.persistence.EntityManager;
+import br.com.empresa.loja.model.Produto;
+
+public class ProdutoDao {
+
+    private EntityManager em;
+
+    public ProdutoDao(EntityManager em) {
+        this.em = em;
+    }
+    
+    public void cadastrar(Produto produto) {
+    	this.em.persist(produto);
+    }
+    
+    public void atualizar(Produto produto) {
+        this.em.merge(produto);
+    }
+    
+    public void remover(Produto produto) {
+    	produto = this.em.merge(produto);
+    	this.em.remove(produto);
+    }
+    
+    public Produto buscarPeloId(Long id) {
+    	return this.em.find(Produto.class, id);    	
+    }
+}

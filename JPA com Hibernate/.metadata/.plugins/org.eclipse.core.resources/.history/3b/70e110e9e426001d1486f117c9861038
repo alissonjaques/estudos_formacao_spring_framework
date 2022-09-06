@@ -1,0 +1,12 @@
+package br.com.empresa.loja.testes;
+
+import java.math.BigDecimal;
+import br.com.empresa.loja.model.Produto;
+
+public class CadastroDeProduto {
+
+	public static void main(String[] args) {
+		Produto celular = new Produto("Xiaomi Redmi","Muito Legal",new BigDecimal("800"));
+	}
+
+}
