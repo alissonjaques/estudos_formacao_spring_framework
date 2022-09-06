@@ -1,0 +1,10 @@
+package br.com.empresa.loja.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "produtos")
+public class Produto {
+
+}

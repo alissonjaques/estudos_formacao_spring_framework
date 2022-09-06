@@ -1,0 +1,39 @@
+package br.com.empresa.loja.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categorias")
+public class Categoria {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nome;
+	
+	public Categoria(String nome) {
+		this.nome = nome;
+	}
+	
+	public Categoria(){
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String toString() {
+		StringBuilder camposFormatados = new StringBuilder();
+		camposFormatados.append("ID da categoria: ").append(id);
+		camposFormatados.append("\nNome da Categoria: ").append(getNome());
+		return camposFormatados.toString();
+	}
+}
