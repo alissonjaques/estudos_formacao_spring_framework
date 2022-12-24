@@ -12,3 +12,7 @@ A aplicação utiliza o modelo de camadas MVC e DAO, além de usuar o padrão Fa
 # 3° Projeto: Introdução ao JPA com Hibernate 
 
 Todas as dependências dessa aplicação foram gerenciadas pelo Maven. A aplicação foi desenvolvida nos modelos de camadas MVC e DAO. Ela representa o CRUD completo de produtos e suas categorias utilizando JPA (Java Persistente API) tendo o Hibernate como implementação. Fica claro com esse projeto o desacoplamento entre o banco de dados da aplicação e as classes da mesma, além disso temos aqui um código mais limpo, menos verboso e mais dinâmico que facilita a sua leitura e manutenção, o que geralmente é muito complicado em aplicações que utilizam JDBC.
+
+# 4° Projeto: API para gerência de pacientes e médicos de um hospital.
+
+Utilizando o padrão API RESTful essa aplicação representa o backend de um sistema de gerência de paciêntes e médicos de um hospital, utilizando o Spring Framemork para o controle de build, persistência, validações etc.
