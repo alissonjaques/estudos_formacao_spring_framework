@@ -1,8 +1,6 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.medico.DadosAtualizacaoMedico;
-import med.voll.api.medico.DadosListagemMedico;
 import med.voll.api.paciente.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +24,7 @@ public class PacienteController {
 
     @GetMapping
     public Page<DadosListagemPaciente> listar(@PageableDefault(size = 10, page = 0, sort = {"nome"}) Pageable paginacao){
-        return repository.findAll(paginacao).map(DadosListagemPaciente::new);
+        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemPaciente::new);
     }
 
     @PutMapping
@@ -34,5 +32,12 @@ public class PacienteController {
     public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizarInformacoes(dados);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id){
+        var paciente = repository.getReferenceById(id);
+        paciente.excluir();
     }
 }
