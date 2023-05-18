@@ -1,13 +1,14 @@
-package med.voll.api.domain.model.consulta.validacoes;
+package med.voll.api.domain.model.consulta.validacoes.agendamento;
 
 import med.voll.api.domain.exceptions.ValidacaoException;
 import med.voll.api.domain.model.consulta.ConsultaRepository;
 import med.voll.api.domain.model.consulta.DadosAgendamentoConsulta;
+import med.voll.api.domain.model.consulta.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta{
+public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta {
     @Autowired
     private ConsultaRepository repository;
 
